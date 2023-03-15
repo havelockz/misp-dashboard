@@ -12,13 +12,13 @@ SCREEN_NAME="Misp_Dashboard"
 
 cd ${DASH_HOME}
 
-if [ -e "${DIR}/DASHENV/bin/python" ]; then
-    echo "dashboard virtualenv seems to exist, good"
-    ENV_PY="${DIR}/DASHENV/bin/python"
-else
-    echo "Please make sure you have a dashboard environment, au revoir"
+#if [ -e "${DIR}/DASHENV/bin/python" ]; then
+  #  echo "dashboard virtualenv seems to exist, good"
+ #   ENV_PY="${DIR}/DASHENV/bin/python"
+#else
+   # echo "Please make sure you have a dashboard environment, au revoir"
     #exit 1
-fi
+#fi
 
 PID_SCREEN=$(screen -ls | grep ${SCREEN_NAME} | cut -f2 | cut -d. -f1)
 if [[ $PID_SCREEN ]]; then
