@@ -17,7 +17,7 @@ if [ -e "${DIR}/DASHENV/bin/python" ]; then
     ENV_PY="${DIR}/DASHENV/bin/python"
 else
     echo "Please make sure you have a dashboard environment, au revoir"
-    exit 1
+    #exit 1
 fi
 
 PID_SCREEN=$(screen -ls | grep ${SCREEN_NAME} | cut -f2 | cut -d. -f1)
